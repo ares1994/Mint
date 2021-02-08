@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mint</string>
+    <string name="last_3_digits_on_the_back_of_your_card">Last 3 Digits on the back of your card</string>
+    <string name="y">Y</string>
+    <string name="slash">/</string>
+    <string name="m">M</string>
+    <string name="cvv">CVV</string>
+    <string name="valid_until">Valid Until</string>
+    <string name="enter_16_digits_on_card">Enter 16 digits on card</string>
+    <string name="_16_digits_of_the_card">16 digits of the card</string>
+    <string name="activate_card">Activate Card</string>
+</resources>

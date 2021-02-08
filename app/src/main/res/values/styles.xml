@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="paragraphOne">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+
+    <style name="paragraphTwo">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+
+
+    <style name="headerOne">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+    <style name="headerTwo">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+
+    <style name="headerThree">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+
+    <style name="headerFour">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+
+    <style name="headerFive">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+
+</resources>

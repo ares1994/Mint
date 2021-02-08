@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_drawable"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/activateCardViewTextView"
+                style="@style/headerFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/activate_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/enterDigitsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/_16_digits_of_the_card"
+                android:textColor="#BEBEBE"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/activateCardViewTextView" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/activateCardViewTextView" />
+            <!--            app:srcCompat="@drawable/verve_drawable"-->
+
+            <EditText
+                android:id="@+id/digitsEditText"
+                style="@style/paragraphOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/teal_700"
+                android:digits="01234 56789"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="28"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/enterDigitsTextView" />
+
+
+            <TextView
+                android:id="@+id/enterDigitTextView"
+                style="@style/paragraphOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_16_digits_on_card"
+                android:textColor="#BEBEBE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/digitsEditText" />
+
+            <TextView
+                android:id="@+id/validThruTextView"
+                style="@style/headerFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/valid_until"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/enterDigitTextView" />
+
+            <TextView
+                android:id="@+id/cvvTextView"
+                style="@style/headerFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="0dp"
+                android:text="@string/cvv"
+                app:layout_constraintBottom_toBottomOf="@id/secondYearDigitEditText"
+                app:layout_constraintStart_toEndOf="@id/secondYearDigitEditText"
+                app:layout_constraintTop_toTopOf="@id/secondYearDigitEditText" />
+
+
+            <EditText
+                android:id="@+id/firstMonthDigitEditText"
+                style="@style/paragraphOne"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/teal_700"
+                android:gravity="center"
+                android:hint="@string/m"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+
+                app:layout_constraintStart_toStartOf="@id/validThruTextView"
+                app:layout_constraintTop_toBottomOf="@id/validThruTextView" />
+
+            <EditText
+                android:id="@+id/secondMonthDigitEditText"
+                style="@style/paragraphOne"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:gravity="center"
+                android:hint="@string/m"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/firstMonthDigitEditText"
+                app:layout_constraintStart_toEndOf="@id/firstMonthDigitEditText" />
+
+            <TextView
+                android:id="@+id/slashTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/slash"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="@+id/secondMonthDigitEditText"
+                app:layout_constraintStart_toEndOf="@id/secondMonthDigitEditText" />
+
+
+            <EditText
+                android:id="@+id/firstYearDigitEditText"
+                style="@style/paragraphOne"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:gravity="center"
+                android:hint="@string/y"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/slashTextView"
+                app:layout_constraintStart_toEndOf="@id/slashTextView" />
+
+            <EditText
+                android:id="@+id/secondYearDigitEditText"
+                style="@style/paragraphOne"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:gravity="center"
+                android:hint="@string/y"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/firstYearDigitEditText"
+                app:layout_constraintStart_toEndOf="@id/firstYearDigitEditText" />
+
+
+            <EditText
+                android:id="@+id/cvvEditText"
+                style="@style/paragraphOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="0dp"
+                android:backgroundTint="@color/teal_700"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="5"
+                app:layout_constraintBottom_toBottomOf="@+id/secondYearDigitEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvvTextView" />
+
+
+            <TextView
+                style="@style/paragraphTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/last_3_digits_on_the_back_of_your_card"
+                android:textColor="#bebebe"
+                app:layout_constraintEnd_toEndOf="@id/cvvEditText"
+                app:layout_constraintStart_toStartOf="@id/cvvTextView"
+                app:layout_constraintTop_toBottomOf="@id/cvvEditText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/firstLayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/brand"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:textAlignment="center"
+            tools:text="Brand : MasterCard" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:id="@+id/type"
+            tools:text="Type : Debit" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstLayer">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/bank"
+            android:textAlignment="center"
+            tools:text="Bank : Zenith" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/country"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_margin="4dp"
+            tools:text="Country : Nigeria" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
